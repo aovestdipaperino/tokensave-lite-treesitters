@@ -17,17 +17,14 @@ pub mod languages {
 }
 
 /// Returns (name, language_fn) pairs for all lite-tier languages.
-pub fn all_languages() -> Vec<(&'static str, tree_sitter::Language)> {
+pub fn all_languages() -> Vec<(&'static str, tree_sitter_language::LanguageFn)> {
     vec![
-        ("rust", tree_sitter_rust::LANGUAGE.into()),
-        ("python", tree_sitter_python::LANGUAGE.into()),
-        ("javascript", tree_sitter_javascript::LANGUAGE.into()),
-        (
-            "typescript",
-            tree_sitter_typescript::LANGUAGE_TYPESCRIPT.into(),
-        ),
-        ("go", tree_sitter_go::LANGUAGE.into()),
-        ("java", tree_sitter_java::LANGUAGE.into()),
-        ("c", tree_sitter_c::LANGUAGE.into()),
+        ("rust", tree_sitter_rust::LANGUAGE),
+        ("python", tree_sitter_python::LANGUAGE),
+        ("javascript", tree_sitter_javascript::LANGUAGE),
+        ("typescript", tree_sitter_typescript::LANGUAGE_TYPESCRIPT),
+        ("go", tree_sitter_go::LANGUAGE),
+        ("java", tree_sitter_java::LANGUAGE),
+        ("c", tree_sitter_c::LANGUAGE),
     ]
 }

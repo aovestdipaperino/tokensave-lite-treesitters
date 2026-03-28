@@ -1,0 +1,13 @@
+/Users/enzo/Code/tree-sitter/localonly/tokensave-lite-treesitters/target/debug/deps/tree_sitter-474195c7a3d9abee.d: /Users/enzo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-0.26.7/binding_rust/lib.rs /Users/enzo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-0.26.7/binding_rust/ffi.rs /Users/enzo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-0.26.7/binding_rust/util.rs /Users/enzo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-0.26.7/binding_rust/./README.md /Users/enzo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-0.26.7/binding_rust/./bindings.rs /Users/enzo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-0.26.7/binding_rust/../src/parser.h /Users/enzo/Code/tree-sitter/localonly/tokensave-lite-treesitters/target/debug/build/tree-sitter-62505188774dd3a7/out/stdlib-symbols.txt
+
+/Users/enzo/Code/tree-sitter/localonly/tokensave-lite-treesitters/target/debug/deps/libtree_sitter-474195c7a3d9abee.rmeta: /Users/enzo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-0.26.7/binding_rust/lib.rs /Users/enzo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-0.26.7/binding_rust/ffi.rs /Users/enzo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-0.26.7/binding_rust/util.rs /Users/enzo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-0.26.7/binding_rust/./README.md /Users/enzo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-0.26.7/binding_rust/./bindings.rs /Users/enzo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-0.26.7/binding_rust/../src/parser.h /Users/enzo/Code/tree-sitter/localonly/tokensave-lite-treesitters/target/debug/build/tree-sitter-62505188774dd3a7/out/stdlib-symbols.txt
+
+/Users/enzo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-0.26.7/binding_rust/lib.rs:
+/Users/enzo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-0.26.7/binding_rust/ffi.rs:
+/Users/enzo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-0.26.7/binding_rust/util.rs:
+/Users/enzo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-0.26.7/binding_rust/./README.md:
+/Users/enzo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-0.26.7/binding_rust/./bindings.rs:
+/Users/enzo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-0.26.7/binding_rust/../src/parser.h:
+/Users/enzo/Code/tree-sitter/localonly/tokensave-lite-treesitters/target/debug/build/tree-sitter-62505188774dd3a7/out/stdlib-symbols.txt:
+
+# env-dep:OUT_DIR=/Users/enzo/Code/tree-sitter/localonly/tokensave-lite-treesitters/target/debug/build/tree-sitter-62505188774dd3a7/out
