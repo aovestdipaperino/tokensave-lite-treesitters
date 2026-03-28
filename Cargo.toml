@@ -5,6 +5,9 @@ authors = ["Enzo Lombardi <enzinol@gmail.com>"]
 edition = "2024"
 description = "Essential tree-sitter grammars for tokensave (7 languages)"
 license = "MIT"
+repository = "https://github.com/aovestdipaperino/tree-sitter"
+
+[workspace]
 
 [dependencies]
 tree-sitter = "0.26"
