@@ -11,25 +11,36 @@
 pub use tree_sitter;
 
 /// Modules named and shaped like the upstream `tree-sitter-*` crates, so callers that reach
-/// through `languages::tree_sitter_rust::LANGUAGE` keep working.
+/// through `languages::tree_sitter_rust::LANGUAGE` (or `NODE_TYPES`, or a query constant) keep working.
 pub mod languages {
-    macro_rules! grammar {
-        ($name:ident, $module:ident) => {
-            pub mod $name {
-                pub use tree_sitter_lite_rs::$module::LANGUAGE;
-            }
+    pub mod tree_sitter_c {
+        pub use tree_sitter_lite_rs::c::{HIGHLIGHT_QUERY, LANGUAGE, NODE_TYPES, TAGS_QUERY};
+    }
+    pub mod tree_sitter_go {
+        pub use tree_sitter_lite_rs::go::{HIGHLIGHTS_QUERY, LANGUAGE, NODE_TYPES, TAGS_QUERY};
+    }
+    pub mod tree_sitter_java {
+        pub use tree_sitter_lite_rs::java::{HIGHLIGHTS_QUERY, LANGUAGE, NODE_TYPES, TAGS_QUERY};
+    }
+    pub mod tree_sitter_javascript {
+        pub use tree_sitter_lite_rs::javascript::{
+            HIGHLIGHT_QUERY, INJECTIONS_QUERY, JSX_HIGHLIGHT_QUERY, LANGUAGE, LOCALS_QUERY,
+            NODE_TYPES, TAGS_QUERY,
         };
     }
-    grammar!(tree_sitter_c, c);
-    grammar!(tree_sitter_go, go);
-    grammar!(tree_sitter_java, java);
-    grammar!(tree_sitter_javascript, javascript);
-    grammar!(tree_sitter_python, python);
-    grammar!(tree_sitter_rust, rust);
-
+    pub mod tree_sitter_python {
+        pub use tree_sitter_lite_rs::python::{HIGHLIGHTS_QUERY, LANGUAGE, NODE_TYPES, TAGS_QUERY};
+    }
+    pub mod tree_sitter_rust {
+        pub use tree_sitter_lite_rs::rust::{
+            HIGHLIGHTS_QUERY, INJECTIONS_QUERY, LANGUAGE, NODE_TYPES, TAGS_QUERY,
+        };
+    }
     pub mod tree_sitter_typescript {
-        pub use tree_sitter_lite_rs::tsx::LANGUAGE as LANGUAGE_TSX;
-        pub use tree_sitter_lite_rs::typescript::LANGUAGE_TYPESCRIPT;
+        pub use tree_sitter_lite_rs::tsx::{LANGUAGE_TSX, TSX_NODE_TYPES};
+        pub use tree_sitter_lite_rs::typescript::{
+            HIGHLIGHTS_QUERY, LANGUAGE_TYPESCRIPT, LOCALS_QUERY, TAGS_QUERY, TYPESCRIPT_NODE_TYPES,
+        };
     }
 }
 
@@ -97,5 +108,27 @@ mod tests {
                 .root_node()
                 .has_error()
         );
+    }
+
+    #[test]
+    fn upstream_constants_come_through_the_shim() {
+        use languages::*;
+        for (name, data) in [
+            ("c", tree_sitter_c::NODE_TYPES),
+            ("go", tree_sitter_go::NODE_TYPES),
+            ("java", tree_sitter_java::NODE_TYPES),
+            ("javascript", tree_sitter_javascript::NODE_TYPES),
+            ("python", tree_sitter_python::NODE_TYPES),
+            ("rust", tree_sitter_rust::NODE_TYPES),
+            ("typescript", tree_sitter_typescript::TYPESCRIPT_NODE_TYPES),
+            ("tsx", tree_sitter_typescript::TSX_NODE_TYPES),
+        ] {
+            assert!(data.trim_start().starts_with('['), "{name}: node types");
+        }
+        // a query constant compiles against its grammar through the shim
+        let lang: tree_sitter::Language = tree_sitter_rust::LANGUAGE.into();
+        tree_sitter::Query::new(&lang, tree_sitter_rust::HIGHLIGHTS_QUERY).unwrap();
+        let ts: tree_sitter::Language = tree_sitter_typescript::LANGUAGE_TYPESCRIPT.into();
+        tree_sitter::Query::new(&ts, tree_sitter_typescript::TAGS_QUERY).unwrap();
     }
 }

@@ -1,6 +1,6 @@
 [package]
 name = "tokensave-lite-treesitters"
-version = "0.2.0"
+version = "0.2.1"
 authors = ["Enzo Lombardi <enzinol@gmail.com>"]
 edition = "2024"
 description = "Essential tree-sitter grammars for tokensave (7 languages), pure Rust: no C grammar sources"
@@ -13,4 +13,4 @@ readme = "README.md"
 [dependencies]
 tree-sitter = "0.26"
 tree-sitter-language = "0.1"
-tree-sitter-lite-rs = { git = "https://github.com/aovestdipaperino/tree-sitter-lite-rs", branch = "main" }
+tree-sitter-lite-rs = { version = "0.1.0", git = "https://github.com/aovestdipaperino/tree-sitter-lite-rs", branch = "main" }
