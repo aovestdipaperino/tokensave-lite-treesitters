@@ -1,5 +1,7 @@
 # tokensave-lite-treesitters
 
+[![GitHub stars](https://img.shields.io/github/stars/aovestdipaperino/tokensave-lite-treesitters?logo=github&color=brightgreen)](https://github.com/aovestdipaperino/tokensave-lite-treesitters/stargazers)
+
 [![Crates.io](https://img.shields.io/crates/v/tokensave-lite-treesitters.svg)](https://crates.io/crates/tokensave-lite-treesitters)
 [![docs.rs](https://docs.rs/tokensave-lite-treesitters/badge.svg)](https://docs.rs/tokensave-lite-treesitters)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
