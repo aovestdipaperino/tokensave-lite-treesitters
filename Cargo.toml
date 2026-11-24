@@ -1,9 +1,9 @@
 [package]
 name = "tokensave-lite-treesitters"
-version = "0.2.0"
+version = "0.2.1"
 authors = ["Enzo Lombardi <enzinol@gmail.com>"]
 edition = "2024"
-description = "Essential tree-sitter grammars for tokensave (7 languages)"
+description = "Essential tree-sitter grammars for tokensave (7 languages), pure Rust: no C grammar sources"
 license = "MIT"
 repository = "https://github.com/aovestdipaperino/tokensave-lite-treesitters"
 readme = "README.md"
@@ -13,10 +13,4 @@ readme = "README.md"
 [dependencies]
 tree-sitter = "0.26"
 tree-sitter-language = "0.1"
-tree-sitter-rust = "0.24"
-tree-sitter-python = "0.25"
-tree-sitter-javascript = "0.25"
-tree-sitter-typescript = "0.23"
-tree-sitter-go = "0.25"
-tree-sitter-java = "0.23"
-tree-sitter-c = "0.24"
+tree-sitter-lite-rs = "0.1.0"
