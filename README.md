@@ -36,3 +36,7 @@ for (name, language) in all_languages() {
 - **lite** (this crate) -- 7 languages
 - **medium** ([tokensave-medium-treesitters](https://crates.io/crates/tokensave-medium-treesitters)) -- 17 languages, includes lite
 - **large** ([tokensave-large-treesitters](https://crates.io/crates/tokensave-large-treesitters)) -- 22+ languages, includes medium
+
+## Pure-Rust grammars (branch `pure-rust-grammars`)
+
+This branch swaps the seven C-based grammar crates for [`tree-sitter-lite-rs`](https://github.com/aovestdipaperino/tree-sitter-lite-rs): parse tables and lexers are transpiled from the released parsers by [c2rs](https://github.com/aovestdipaperino/c2rs) and the external scanners are hand-ported, so no grammar C source is compiled. The public API is unchanged (`all_languages()` and `languages::tree_sitter_*::LANGUAGE`). tokensave's full integration suite passes against it.
